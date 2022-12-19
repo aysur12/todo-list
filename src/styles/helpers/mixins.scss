@@ -1,0 +1,25 @@
+@mixin font-h1 {
+  font: 700 3.688rem/1.24 $main-font-family;
+  letter-spacing: 0.02em;
+}
+
+@mixin font-h1-mobile {
+  font: 700 2.125rem/1.12 $main-font-family;
+  letter-spacing: 0.02em;
+}
+
+@mixin font-text-big {
+  font: 400 1.438rem/1.22 $main-font-family;
+}
+
+@mixin font-text-big-mobile {
+  font: 700 1rem/1.44 $main-font-family;
+}
+
+@mixin font-text-normal {
+  font: 400 1.25rem/1.4 $main-font-family;
+}
+
+@mixin font-text-normal-mobile {
+  font: 400 1rem/1.44 $main-font-family;
+}

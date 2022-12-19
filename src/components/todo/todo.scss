@@ -1,0 +1,149 @@
+.todo {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  &__title {
+    margin: 0 0 20px;
+    color: $green400;
+    text-align: center;
+    @include font-h1;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+      @include font-h1-mobile;
+    }
+  }
+
+  &__app {
+    border: 1px solid $gray200;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__form-content {
+    display: flex;
+    border-bottom: 1px solid $gray200;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__dropdown-button {
+    display: flex;
+    align-items: center;
+    flex-basis: 90px;
+    padding: 5px 20px;
+    background-color: $beige100;
+    background-image: url('../../assets/images/expand-arrow.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &_hidden {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+
+    &:focus {
+      background-color: $gray300;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-basis: 40px;
+      padding: 5px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+
+    &_hidden {
+      display: none;
+    }
+
+    @media screen and (max-width: 540px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 5px;
+    }
+  }
+
+  &__count-block {
+    display: flex;
+    gap: 5px;
+    color: $gray400;
+    @include font-text-normal;
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
+  }
+
+  &__count-text {
+    width: 50px;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__footer-button {
+    color: $gray400;
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+    @include font-text-normal;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      border-color: $gray300;
+      border-radius: 5px;
+    }
+
+    &_active {
+      background-color: $gray200;
+      border-color: $gray200;
+      border-radius: 5px;
+    }
+
+    &_clear-completed {
+      border: none;
+
+      &_hidden {
+        visibility: hidden;
+      }
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $green300;
+        border-radius: 5px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
+  }
+}

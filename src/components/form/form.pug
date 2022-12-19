@@ -1,0 +1,14 @@
+mixin form(params = {})
+  -
+    const {
+      inputPlaceholder= "",
+      formBtnText,
+    } = params;
+
+  form.form.js-form
+    label.form__label
+      input.form__input.js-form__input(
+        type="text",
+        placeholder= inputPlaceholder,
+      )
+    button.form__button.js-form__button(type="submit")= formBtnText

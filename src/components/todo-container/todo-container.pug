@@ -1,0 +1,24 @@
+include ../todo/todo
+
+mixin todo-container(params = {})
+  -
+    const {
+      todoTitleText,
+      inputPlaceholder,
+      formBtnText,
+      btnFilterAllText,
+      btnFilterActiveText,
+      btnFilterCompletedText,
+      btnClearCompletedText,
+    } =params;
+
+  section.todo-container.js-todo-container
+    +todo({
+      todoTitleText,
+      inputPlaceholder,
+      formBtnText,
+      btnFilterAllText,
+      btnFilterActiveText,
+      btnFilterCompletedText,
+      btnClearCompletedText,
+    })

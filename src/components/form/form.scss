@@ -1,0 +1,60 @@
+.form {
+  display: flex;
+
+  &__label {
+    flex-basis: 90%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.95em;
+    color: $black;
+    background-color: $beige100;
+    border: none;
+    outline: none;
+    @include font-text-normal;
+
+    cursor: pointer;
+
+    &::placeholder {
+      color: $gray300;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $beige200;
+    }
+
+    &:focus {
+      background-color: $beige200;
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding: 10px;
+    }
+  }
+
+  &__button {
+    flex-basis: 10%;
+    padding: 5px;
+    color: $white;
+    background-color: $green300;
+    border: none;
+    outline: none;
+    @include font-text-normal;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $green400;
+    }
+
+    &:focus {
+      background-color: $gray300;
+    }
+  }
+}

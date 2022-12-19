@@ -1,0 +1,54 @@
+include ../form/form
+include ../list/list
+
+mixin todo(params = {})
+  -
+    const {
+      todoTitleText= "",
+      inputPlaceholder,
+      formBtnText,
+      btnFilterAllText= "",
+      btnFilterActiveText= "",
+      btnFilterCompletedText= "",
+      btnClearCompletedText= "",
+    } = params;
+
+  .todo
+    h1.todo__title= todoTitleText
+    .todo__app
+      .todo__form-content
+        button.todo__dropdown-button.js-todo__dropdown-button
+        .todo__form
+          +form({
+            inputPlaceholder,
+            formBtnText,
+          })
+      +list
+      .todo__footer.js-todo__footer
+        .todo__count-block
+          span.todo__count-value.js-todo__count-value
+          span.todo__count-text.js-todo__count-text
+        ul.todo__filters
+          li.todo__filters-item
+            button.todo__footer-button.js-todo__footer-button_filter(
+              class="todo__footer-button_filter_all js-todo__footer-button_filter_all"
+              type="button"
+              id="1"
+            )= btnFilterAllText
+          li.todo__filters-item
+            button.todo__footer-button.js-todo__footer-button_filter(
+              class="todo__footer-button_filter_active js-todo__footer-button_filter_active"
+              type="button"
+              id="2"
+            )= btnFilterActiveText
+          li.todo__filters-item
+            button.todo__footer-button.js-todo__footer-button_filter(
+              class="todo__footer-button_filter_completed js-todo__footer-button_filter_completed"
+              type="button"
+              id="3"
+            )= btnFilterCompletedText
+        button.todo__footer-button(
+          class="todo__footer-button_clear-completed js-todo__footer-button_clear-completed"
+          type="button"
+        )= btnClearCompletedText
+
