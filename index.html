@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link href="./assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="page">
+      <section class="todo-container js-todo-container">
+        <div class="todo">
+          <h1 class="todo__title">Todos</h1>
+          <div class="todo__app">
+            <div class="todo__form-content">
+              <button class="todo__dropdown-button js-todo__dropdown-button"></button>
+              <div class="todo__form">
+                <form class="form js-form">
+                  <label class="form__label">
+                    <input class="form__input js-form__input" type="text" placeholder="What needs to be done?"/>
+                  </label>
+                  <button class="form__button js-form__button" type="submit">Add</button>
+                </form>
+              </div>
+            </div>
+            <ul class="list js-list"></ul>
+            <div class="todo__footer js-todo__footer">
+              <div class="todo__count-block"><span class="todo__count-value js-todo__count-value"></span><span class="todo__count-text js-todo__count-text"></span></div>
+              <ul class="todo__filters">
+                <li class="todo__filters-item">
+                  <button class="todo__footer-button js-todo__footer-button_filter todo__footer-button_filter_all js-todo__footer-button_filter_all" type="button" id="1">All</button>
+                </li>
+                <li class="todo__filters-item">
+                  <button class="todo__footer-button js-todo__footer-button_filter todo__footer-button_filter_active js-todo__footer-button_filter_active" type="button" id="2">Active</button>
+                </li>
+                <li class="todo__filters-item">
+                  <button class="todo__footer-button js-todo__footer-button_filter todo__footer-button_filter_completed js-todo__footer-button_filter_completed" type="button" id="3">Completed</button>
+                </li>
+              </ul>
+              <button class="todo__footer-button todo__footer-button_clear-completed js-todo__footer-button_clear-completed" type="button">Clear completed</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
