@@ -2,6 +2,8 @@
 
 Простое приложение для составления списка Todo, сделанное на ванильном Javascript с сохранением в localStorage
 ___
+Cсылка на проект: https://aysur12.github.io/todo-list/
+___
 В работе использовались:
   + компонентная архитектура;
   + методология [БЭМ](https://ru.bem.info/methodology/quick-start/);
