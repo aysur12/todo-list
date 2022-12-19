@@ -1,1 +1,32 @@
-# Gulp-сборка
+# Todo List
+
+A quite simple Todo list app made with vanilla Javascript with saving to localStorage
+___
+В работе использовались:
+  + компонентная архитектура;
+  + методология [БЭМ](https://ru.bem.info/methodology/quick-start/);
+
+Для соблюдения компонентного подхода применялись следующие инструменты разработки:
+  + [Gulp](https://gulpjs.com/);
+  + шаблонизатор [Pug (Jade)](https://pugjs.org/api/getting-started.html);
+  + препроцессор SASS ([SCSS](https://sass-scss.ru/));
+
+
+  ## Развертывание
+##### Клонирование репозитория
+```
+git clone https://github.com/aysur12/todo-list
+cd todo-list
+```
+##### Устновка зависимостей
+```
+yarn install
+```
+##### Запуск производственной сборки проекта
+```
+gulp build
+```
+##### Запуск в режиме dev-server
+```
+gulp start
+```
