@@ -56,5 +56,9 @@
     &:focus {
       background-color: $gray300;
     }
+
+    @media screen and (max-width: 767px) {
+      @include font-text-normal-mobile;
+    }
   }
 }
