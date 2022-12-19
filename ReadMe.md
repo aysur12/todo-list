@@ -1,6 +1,6 @@
 # Todo List
 
-A quite simple Todo list app made with vanilla Javascript with saving to localStorage
+Простое приложение для составления списка Todo, сделанное на ванильном Javascript с сохранением в localStorage
 ___
 В работе использовались:
   + компонентная архитектура;
