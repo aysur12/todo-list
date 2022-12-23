@@ -1,7 +1,8 @@
 import displayElements from '../../js/functions/display/displayElements';
-import handleCheckboxClick from './handleCheckboxClick';
+import handleCheckboxChange from './handleCheckboxChange';
 import handleDeleteButtonClick from './handleDeleteButtonClick';
-import handleCheckboxSpanClick from './handleCheckboxSpanClick';
+import handleCheckboxSpanDblclick from './handleCheckboxSpanDblclick';
+import handleCheckboxSpanKeydown from './handleCheckboxSpanKeydown';
 import isFilterActiveButton from '../../js/functions/isButton/isFilterActiveButton';
 import isFilterCompletedButton from '../../js/functions/isButton/isFilterCompletedButton';
 
@@ -19,8 +20,10 @@ if (isFilterCompletedButton()) {
 
 const list = document.querySelector('.js-list');
 
-list.addEventListener('change', handleCheckboxClick);
+list.addEventListener('change', handleCheckboxChange);
 
 list.addEventListener('click', handleDeleteButtonClick);
 
-list.addEventListener('focusout', handleCheckboxSpanClick);
+list.addEventListener('dblclick', handleCheckboxSpanDblclick);
+
+list.addEventListener('keydown', handleCheckboxSpanKeydown);

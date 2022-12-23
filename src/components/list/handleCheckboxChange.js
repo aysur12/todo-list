@@ -3,7 +3,7 @@ import displayElements from '../../js/functions/display/displayElements';
 import isFilterCompletedButton from '../../js/functions/isButton/isFilterCompletedButton';
 import isFilterActiveButton from '../../js/functions/isButton/isFilterActiveButton';
 
-const handleCheckboxClick = (event) => {
+const handleCheckboxChange = (event) => {
   if (event.target.classList.contains('js-list__checkbox-input')) {
     const parentElem = event.target.closest('.js-list__item');
     const id = parseInt(parentElem.id, 10);
@@ -20,4 +20,4 @@ const handleCheckboxClick = (event) => {
   }
 };
 
-export default handleCheckboxClick;
+export default handleCheckboxChange;

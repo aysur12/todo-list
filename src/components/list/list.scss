@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 5px;
+    padding: 10px 0px 10px 5px;
     border-bottom: 1px solid $gray200;
 
     &:hover .list__delete-button {
@@ -76,9 +76,10 @@
 
   &__checkbox-span {
     display: inline-block;
-    padding: 10px 5px;
+    padding: 10px 30px 10px 5px;
     color: $black;
     border: 1px solid transparent;
+    word-break: break-all;
     @include font-text-normal;
 
     &_checked {
@@ -106,7 +107,7 @@
     width: 20px;
     height: 20px;
     margin: auto 0;
-    margin-bottom: 25px;
+    padding: 0;
     background-color: transparent;
     background-image: url('../../assets/images/close-icon.svg');
     background-size: cover;

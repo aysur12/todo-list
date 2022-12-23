@@ -6,7 +6,7 @@ import isFilterCompletedButton from '../functions/isButton/isFilterCompletedButt
 const handleAddTodoItem = (event) => {
   const form = document.querySelector('.js-form');
   const formInput = document.querySelector('.js-form__input');
-  const formText = formInput.value;
+  const formText = formInput.value.trim();
 
   if (event.target === form) {
     event.preventDefault();

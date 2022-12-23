@@ -28,7 +28,6 @@ const displayTodos = (todoArr) => {
       'js-list__checkbox-span',
     ];
     const checkboxSpan = createElement('span', ...checkboxSpanClasses);
-    checkboxSpan.contentEditable = true;
 
     if (checked) {
       checkboxSpan.classList.add('list__checkbox-span_checked');
@@ -41,10 +40,10 @@ const displayTodos = (todoArr) => {
         's',
         ...strikethroughBlockClasses,
       );
-      strikethroughBlock.textContent = text;
+      strikethroughBlock.textContent = text.trim();
       checkboxSpan.append(strikethroughBlock);
     } else {
-      checkboxSpan.textContent = text;
+      checkboxSpan.textContent = text.trim();
     }
 
     const deleteBtnClasses = ['list__delete-button', 'js-list__delete-button'];
