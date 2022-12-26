@@ -28,6 +28,7 @@ const displayTodos = (todoArr) => {
       'js-list__checkbox-span',
     ];
     const checkboxSpan = createElement('span', ...checkboxSpanClasses);
+    checkboxSpan.contentEditable = false;
 
     if (checked) {
       checkboxSpan.classList.add('list__checkbox-span_checked');

@@ -7,8 +7,6 @@ const handleCheckboxSpanKeydown = (event) => {
   if (event.key === 'Enter') {
     editCheckboxSpan(event);
   } else if (event.key === 'Escape') {
-    event.preventDefault();
-
     const todos = JSON.parse(localStorage.getItem('todoList'));
 
     todos.forEach((todo) => {
@@ -16,6 +14,8 @@ const handleCheckboxSpanKeydown = (event) => {
         event.target.innerHTML = todo.text;
       }
     });
+
+    event.target.setAttribute('contenteditable', false);
   }
 };
 

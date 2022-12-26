@@ -76,7 +76,8 @@
 
   &__checkbox-span {
     display: inline-block;
-    padding: 10px 30px 10px 5px;
+    flex-basis: 90%;
+    padding: 10px 5px;
     color: $black;
     border: 1px solid transparent;
     word-break: break-all;
