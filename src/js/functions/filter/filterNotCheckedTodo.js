@@ -1,5 +1,5 @@
 const filterNotCheckedTodo = (todoArr) => {
-  const filteredArr = todoArr.filter((todo) => todo.checked === false);
+  const filteredArr = todoArr.filter((todo) => !todo.checked);
   return filteredArr.length;
 };
 

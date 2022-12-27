@@ -10,23 +10,25 @@ const displayElements = (todoArr) => {
     '.js-todo__footer-button_clear-completed',
   );
 
-  displayTodos(todoArr);
-  displayCount(JSON.parse(localStorage.getItem('todoList')) || []);
-  showElement(
-    JSON.parse(localStorage.getItem('todoList')) || [],
-    dropdownBtn,
-    'todo__dropdown-button_hidden',
-  );
-  showElement(
-    JSON.parse(localStorage.getItem('todoList')) || [],
-    footer,
-    'todo__footer_hidden',
-  );
-  showClearCompletedButton(
-    todoArr,
-    clearCompletedBtn,
-    'todo__footer-button_clear-completed_hidden',
-  );
+  if (todoArr) {
+    displayTodos(todoArr);
+    displayCount(JSON.parse(localStorage.getItem('todoList')) || []);
+    showElement(
+      JSON.parse(localStorage.getItem('todoList')) || [],
+      dropdownBtn,
+      'todo__dropdown-button_hidden',
+    );
+    showElement(
+      JSON.parse(localStorage.getItem('todoList')) || [],
+      footer,
+      'todo__footer_hidden',
+    );
+    showClearCompletedButton(
+      todoArr,
+      clearCompletedBtn,
+      'todo__footer-button_clear-completed_hidden',
+    );
+  }
 };
 
 export default displayElements;

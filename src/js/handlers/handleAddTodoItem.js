@@ -8,11 +8,11 @@ const handleAddTodoItem = (event) => {
   const formInput = document.querySelector('.js-form__input');
   const formText = formInput.value.trim();
 
-  if (event.target === form) {
+  if (event.currentTarget === form) {
     event.preventDefault();
   }
 
-  if (formText !== '') {
+  if (formText) {
     addTodo(formText, JSON.parse(localStorage.getItem('todoList')));
 
     if (isFilterCompletedButton()) {

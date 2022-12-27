@@ -1,4 +1,4 @@
-import editCheckboxSpan from './editCheckboxSpan';
+import editCheckboxSpan from '../functions/edit/editCheckboxSpan';
 
 const handleCheckboxSpanFocusout = (event) => {
   editCheckboxSpan(event);

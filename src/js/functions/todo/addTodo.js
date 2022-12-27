@@ -6,7 +6,7 @@ const addTodo = (todoText, todoArr) => {
   todoArr = JSON.parse(localStorage.getItem('todoList')) || [];
 
   const todo = {
-    id: todoArr.length > 0 ? todoArr[todoArr.length - 1].id + 1 : 1,
+    id: todoArr.length ? todoArr[todoArr.length - 1].id + 1 : 1,
     text: todoText,
     checked: false,
   };
