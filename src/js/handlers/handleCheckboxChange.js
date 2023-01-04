@@ -1,5 +1,5 @@
-import toggleTodo from '../functions/todo/toggleTodo';
-import displayElementsWithFilter from '../functions/display/displayElementsWithFilter';
+import toggleTodo from '../../js/functions/todo/toggleTodo';
+import displayElementsWithFilter from '../../js/functions/display/displayElementsWithFilter';
 
 const handleCheckboxChange = (event) => {
   const parentElem = event.currentTarget.closest('.js-list__item');

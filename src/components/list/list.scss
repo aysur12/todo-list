@@ -76,7 +76,8 @@
 
   &__checkbox-span {
     display: inline-block;
-    flex-basis: 90%;
+    width: 90%;
+    margin-right: 35px;
     padding: 10px 5px;
     color: $black;
     border: 1px solid transparent;
@@ -94,9 +95,11 @@
       outline: none;
     }
 
+
     @media screen and (max-width: 767px) {
       @include font-text-normal-mobile;
     }
+
   }
 
   &__delete-button {
